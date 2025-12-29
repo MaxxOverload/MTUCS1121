@@ -16,6 +16,7 @@ public class Book1TwoSeventeen {
 		System.out.print("Enter the wind speed miles per hour: ");
 		windSpeed = input.nextDouble();
 		
+		// Use the NWS wind chill temperature formula given in the textbook
 		double windChillTemp = 35.74 + (0.6215 * outsideTemp) - (35.75 * Math.pow(windSpeed, 0.16) )
 			+ (0.4275 * outsideTemp * Math.pow(windSpeed, 0.16) );
 		
