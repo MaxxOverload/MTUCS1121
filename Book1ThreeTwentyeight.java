@@ -68,22 +68,22 @@ public class Book1ThreeTwentyeight {
 		double rect2Point4Y = rect2CenterY - rect2Height / 2;
 		
 		// Testing if point 1 of rectangle 2 is inside rectangle 1
-		if ( (rect2Point1X > rect1MinX && rect2Point1X < rect1MaxX) &&
+		if ( (rect2Point1X >= rect1MinX && rect2Point1X <= rect1MaxX) &&
 				(rect2Point1Y > rect1MinY && rect2Point1Y < rect1MaxY) )
 			point1Inside = true;
 		
 		// Testing if point 2 of rectangle 2 is inside rectangle 1
-		if ( (rect2Point2X > rect1MinX && rect2Point2X < rect1MaxX) &&
+		if ( (rect2Point2X >= rect1MinX && rect2Point2X <= rect1MaxX) &&
 				(rect2Point2Y > rect1MinY && rect2Point2Y < rect1MaxY) )
 			point2Inside = true;
 		
 		// Testing if point 3 of rectangle 2 is inside rectangle 1
-		if ( (rect2Point3X > rect1MinX && rect2Point3X < rect1MaxX) &&
+		if ( (rect2Point3X >= rect1MinX && rect2Point3X <= rect1MaxX) &&
 				(rect2Point3Y > rect1MinY && rect2Point3Y < rect1MaxY) )
 			point3Inside = true;
 		
 		// Testing if point 4 of rectangle 2 is inside rectangle 1
-		if ( (rect2Point4X > rect1MinX && rect2Point4X < rect1MaxX) &&
+		if ( (rect2Point4X >= rect1MinX && rect2Point4X <= rect1MaxX) &&
 				(rect2Point4Y > rect1MinY && rect2Point4Y < rect1MaxY) )
 			point4Inside = true;
 		
