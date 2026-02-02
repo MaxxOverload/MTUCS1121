@@ -37,7 +37,7 @@ public class Book1ThreeTwentyeight {
 		boolean point3Inside = false;
 		boolean point4Inside = false;
 		boolean inside = false;
-		boolean overlap = false;
+		boolean overlaps = false;
 		
 		// Minimum x-value of rectangle 1
 		double rect1MinX = rect1CenterX - rect1Width / 2;
@@ -69,22 +69,22 @@ public class Book1ThreeTwentyeight {
 		
 		// Testing if point 1 of rectangle 2 is inside rectangle 1
 		if ( (rect2Point1X >= rect1MinX && rect2Point1X <= rect1MaxX) &&
-				(rect2Point1Y > rect1MinY && rect2Point1Y < rect1MaxY) )
+				(rect2Point1Y >= rect1MinY && rect2Point1Y <= rect1MaxY) )
 			point1Inside = true;
 		
 		// Testing if point 2 of rectangle 2 is inside rectangle 1
 		if ( (rect2Point2X >= rect1MinX && rect2Point2X <= rect1MaxX) &&
-				(rect2Point2Y > rect1MinY && rect2Point2Y < rect1MaxY) )
+				(rect2Point2Y >= rect1MinY && rect2Point2Y <= rect1MaxY) )
 			point2Inside = true;
 		
 		// Testing if point 3 of rectangle 2 is inside rectangle 1
 		if ( (rect2Point3X >= rect1MinX && rect2Point3X <= rect1MaxX) &&
-				(rect2Point3Y > rect1MinY && rect2Point3Y < rect1MaxY) )
+				(rect2Point3Y >= rect1MinY && rect2Point3Y <= rect1MaxY) )
 			point3Inside = true;
 		
 		// Testing if point 4 of rectangle 2 is inside rectangle 1
 		if ( (rect2Point4X >= rect1MinX && rect2Point4X <= rect1MaxX) &&
-				(rect2Point4Y > rect1MinY && rect2Point4Y < rect1MaxY) )
+				(rect2Point4Y >= rect1MinY && rect2Point4Y <= rect1MaxY) )
 			point4Inside = true;
 		
 		// Testing if rectangle 2 is inside rectangle 1
@@ -93,12 +93,12 @@ public class Book1ThreeTwentyeight {
 		
 		// Testing if rectangle 2 overlaps rectangle 1
 		else if (point1Inside || point2Inside || point3Inside || point4Inside)
-			overlap = true;
+			overlaps = true;
 		
 		// Print the final result
 		if (inside) 
 			System.out.println("r2 is inside r1");
-		else if (overlap)
+		else if (overlaps)
 			System.out.println("r2 overlaps r1");
 		else
 			System.out.println("r2 does not overlap r1");
